@@ -58,7 +58,6 @@ public class VirtualTable
                 originMap[valueType] = valueMap;
             }
 
-            Console.WriteLine($"0x{*map[methodInfo].Address:X}  ->  0x{valueMap[value].Value:X}");
             *map[methodInfo].Address = valueMap[value].Value;
 
             _map[methodInfo] = value;
