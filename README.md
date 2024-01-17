@@ -13,8 +13,10 @@ class Program
         var programMyMethod = typeof(Program).GetMethod("MyToString")!;
 
         virtualTable[objectToString] = programMyMethod;
+        Console.WriteLine(new object().ToString()); // output: Hi!
 
-        Console.WriteLine(new object().ToString()); // output Hi!
+        virtualTable.Reset();
+        Console.WriteLine(new object().ToString()); // output: System.Object
     }
 }
 ```

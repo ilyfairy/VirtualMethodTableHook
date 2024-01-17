@@ -66,7 +66,7 @@ public class VirtualTable
 
     public void Reset()
     {
-        foreach (var item in _map)
+        foreach (var item in _map.ToArray())
         {
             this[item.Key] = item.Key;
         }
